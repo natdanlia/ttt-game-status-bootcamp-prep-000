@@ -4,7 +4,6 @@ def position_taken?(board, index)
 end
 
 # Define your WIN_COMBINATIONS constant
-board = ['X','O','X','0','0','0','4','4','4']
 WIN_COMBINATIONS = [
 [0,1,2],
 [3,4,5],
@@ -37,9 +36,8 @@ def over?(board)
 end
 
 def winner(board)
-  won?(board).select do |combo|
+  won?(board).detect do |combo|
     board[combo]
-  
   end
 end
 
