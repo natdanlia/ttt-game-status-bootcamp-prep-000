@@ -37,7 +37,7 @@ end
 
 def winner(board)
   won?(board).detect do |combo|
-    board[combo]
+    board[combo[0]]
   end
 end
 
